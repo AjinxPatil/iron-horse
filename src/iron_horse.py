@@ -28,8 +28,8 @@ spritelayer_cargo_module_names = [
 railtype_module_names = [
     "lgv",
     "lgv_electrified",
-    "metro",
-    "narrow_gauge",
+    #"metro",
+    #"narrow_gauge",
     "rail_electrified_ac",
     "rail_electrified_ac_dc",
     "rail_electrified_dc",

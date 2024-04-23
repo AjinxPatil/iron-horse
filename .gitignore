@@ -7,6 +7,8 @@ tmp/
 *.nfo
 *.new
 dups.txt
+__pycache__/
+.venv/
 
 # The local makefile should be ignored:
 Makefile.local
