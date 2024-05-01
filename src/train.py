@@ -326,8 +326,8 @@ class Consist(object):
         default_name = "STR_NAME_" + self.id.upper()
         if context == "purchase_level_1":
             result = [default_name]
-        elif context == "default_name":
-            result = [default_name]
+        #elif context == "default_name":
+        #    result = [default_name]
         else:
             if self.str_name_suffix is not None:
                 result = [
