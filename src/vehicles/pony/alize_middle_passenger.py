@@ -6,7 +6,7 @@ def main(roster_id, **kwargs):
         roster_id=roster_id,
         id="alize_middle_passenger",
         base_numeric_id=350,
-        name="Alizé Passenger Coach",
+        name="Alizé Passenger",
         role="very_high_speed",
         power_by_power_source={
             "AC": 0
