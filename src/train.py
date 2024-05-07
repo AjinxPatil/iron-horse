@@ -2640,6 +2640,8 @@ class AutomobileDoubleDeckCarConsist(AutomobileCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "double_deck_automobile_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         # blah blah, more restrictive refits for double deck, cars only
         self.label_refits_allowed = ["PASS", "VEHI"]
@@ -2796,6 +2798,8 @@ class BoxCarConsist(BoxCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "box_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.randomised_candidate_groups = [
             "randomised_box_car",
@@ -3010,6 +3014,8 @@ class BoxCarSlidingWallConsist(BoxCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "sliding_wall_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["box_sliding_wall"]
         self._intro_year_days_offset = (
@@ -3512,6 +3518,8 @@ class CoveredHopperCarConsist(CoveredHopperCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "covered_hopper_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["covered_pellet"]
         self.randomised_candidate_groups = ["randomised_covered_hopper_car"]
@@ -3801,6 +3809,8 @@ class DumpCarConsist(DumpCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "dump_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.randomised_candidate_groups = [
             "randomised_dump_car",
@@ -4076,6 +4086,8 @@ class DumpCarOreConsist(DumpCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "ore_dump_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["dump_ore"]
         self.gestalt_graphics.liveries = [
@@ -4125,6 +4137,8 @@ class DumpCarScrapMetalConsist(DumpCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "scrap_metal_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["dump_scrap"]
         # Graphics configuration
@@ -4236,6 +4250,8 @@ class ExpressCarConsist(CarConsist):
 
     def __init__(self, **kwargs):
         self.base_id = "express_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.speed_class = "express"
         self.class_refit_groups = ["mail", "express_freight"]
@@ -4528,6 +4544,8 @@ class FlatCarConsist(FlatCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "flat_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.randomised_candidate_groups = [
             "randomised_flat_car",
@@ -5116,6 +5134,8 @@ class HopperCarConsist(HopperCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "hopper_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["hopper_coal"]
         self.randomised_candidate_groups = [
@@ -5398,6 +5418,8 @@ class IntermodalCarConsist(IntermodalCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "intermodal_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         # buyable variant groups are created post-hoc and can group across subclasses
         # any buyable variants (liveries) within the subclass will be automatically added to the group
@@ -5474,6 +5496,8 @@ class LivestockCarConsist(CarConsist):
 
     def __init__(self, **kwargs):
         self.base_id = "livestock_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.class_refit_groups = []  # no classes, use explicit labels
         self.label_refits_allowed = ["LVST"]
@@ -5533,6 +5557,8 @@ class LogCarConsist(CarConsist):
 
     def __init__(self, **kwargs):
         self.base_id = "log_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.class_refit_groups = []  # no classes, use explicit labels
         # limited refits by design eh
@@ -5641,6 +5667,8 @@ class MailCarConsist(MailCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "mail_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.speed_class = "express"
         # adjust weight factor because mail car freight capacity is 1/2 of other wagons, but weight should be same
@@ -5743,6 +5771,8 @@ class MailHighSpeedCarConsist(MailCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "high_speed_mail_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.speed_class = "express"
         self.lgv_capable = True
@@ -5850,6 +5880,8 @@ class OpenCarConsist(OpenCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "open_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["open"]
         # buyable variant groups are created post-hoc and can group across subclasses
@@ -6118,6 +6150,8 @@ class PassengerCarConsist(PassengerCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "passenger_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         """ # not working as expected, unwanted nesting of panoramic car, needs debugged
         # buyable variant groups are created post-hoc and can group across subclasses
@@ -6166,6 +6200,8 @@ class PassengerHighSpeedCarConsist(PassengerCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "high_speed_passenger_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.lgv_capable = True
         # buy costs and run costs are levelled for standard and lux pax cars, not an interesting factor for variation
@@ -6960,6 +6996,8 @@ class TankCarConsist(TankCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "tank_car"
+        # Force set buyable variant group for simplified gameplay
+        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
         self.default_cargos = polar_fox.constants.default_cargos["tank"]
         # Graphics configuration
