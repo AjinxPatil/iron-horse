@@ -2640,9 +2640,9 @@ class AutomobileDoubleDeckCarConsist(AutomobileCarConsistBase):
 
     def __init__(self, **kwargs):
         self.base_id = "double_deck_automobile_car"
-        # Force set buyable variant group for simplified gameplay
-        kwargs["buyable_variant_group_id"] = self.base_id
         super().__init__(**kwargs)
+        # Exclude from simplified gameplay
+        self._joker = True
         # blah blah, more restrictive refits for double deck, cars only
         self.label_refits_allowed = ["PASS", "VEHI"]
         self.use_cargo_subytpes_VEHI = False
@@ -4362,6 +4362,8 @@ class FarmProductsBoxCarConsist(CarConsist):
     def __init__(self, **kwargs):
         self.base_id = "farm_products_box_car"
         super().__init__(**kwargs)
+        # Exclude from simplified gameplay
+        self._joker = True
         # note this is not derived from BoxCarBase, it's a standalone type
         self.class_refit_groups = []  # no classes, use explicit labels
         self.label_refits_allowed = polar_fox.constants.allowed_refits_by_label[
